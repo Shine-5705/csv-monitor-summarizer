@@ -1,4 +1,4 @@
+streamlit 
 pandas 
-watchdog 
-openai
+requests 
 python-dotenv
