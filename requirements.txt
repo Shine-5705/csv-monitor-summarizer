@@ -1,0 +1,4 @@
+pandas 
+watchdog 
+openai
+python-dotenv
