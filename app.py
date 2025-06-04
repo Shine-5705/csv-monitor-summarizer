@@ -44,8 +44,13 @@ def generate_detailed_pdf(df):
         profile.to_file(html_file.name)
         pdf_path = html_file.name.replace(".html", ".pdf")
         # Path to wkhtmltopdf executable - adjust if needed
-        path_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
-        config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+        #path_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+        #config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+
+        # On Linux (Render), wkhtmltopdf should be installed and in PATH
+        config = pdfkit.configuration()  # no path specified
+
+
         pdfkit.from_file(html_file.name, pdf_path, configuration=config)
         return pdf_path
 
