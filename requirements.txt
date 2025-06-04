@@ -1,6 +1,6 @@
 streamlit
 pandas
 requests
-python-dotenv
-ydata-profiling
+pandas-profiling
 pdfkit
+python-dotenv
