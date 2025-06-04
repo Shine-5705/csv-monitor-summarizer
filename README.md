@@ -4,7 +4,18 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 
 ---
 
-## Why Use This App?
+## 🚀 What's New
+
+✅ **Mistral Summary in Email Body**  
+✅ **PDF Report Generation**  
+✅ **CSV File Sent as Email Attachment**  
+✅ **Fully Editable Sender/Receiver Fields**  
+✅ **.env Support for Secret Management**  
+✅ **One-Click Email Sending with Insights + Attachments**  
+
+---
+
+## 💡 Why Use This App?
 
 - **Save Time:** Instantly get summaries of large CSV datasets without manually reading rows and columns.
 - **Better Communication:** Share key insights with colleagues or stakeholders via email, including the original CSV for reference.
@@ -14,12 +25,12 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 
 ---
 
-## Application Preview
+## 📸 Application Preview
 
-![Streamlit CSV Summarizer UI Screenshot](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/ui.png)
+![Streamlit CSV Summarizer UI Screenshot](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/image.png)
 
 <details>
-<summary>Demo Video</summary>
+<summary>🎥 Demo Video</summary>
 
 [![CSV Summarizer Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
 
@@ -27,89 +38,129 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 
 ---
 
-## Features
+## ✨ Features
 
-- Upload and preview CSV files easily.
-- Generate AI-powered summaries to grasp data highlights quickly.
-- Email summaries with the original CSV attached.
-- Support for custom email credentials for secure SMTP sending.
-- Optionally use your own Mistral API key or default from environment variables.
+- 📤 Upload and preview CSV files.
+- 🤖 Generate Mistral AI summaries to grasp insights instantly.
+- 📧 Send emails with:
+  - 📝 AI-generated summary in the **email body**
+  - 📎 Attached CSV and **PDF report** of the summary
+- 🔐 Secure email using Gmail SMTP and App Passwords.
+- 🔄 Supports `.env` secrets or manual entry.
+- 💻 Clean, responsive UI built using Streamlit.
 
 ---
 
-## Getting Started
+## ⚙️ Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Python 3.7+
-- Streamlit (`pip install streamlit`)
-- Requests (`pip install requests`)
-- Python dotenv (`pip install python-dotenv`)
-- Pandas (`pip install pandas`)
+- Install dependencies:
 
-### Setup
+```bash
+pip install streamlit pandas requests ydata-profiling pdfkit python-dotenv
+```
+or 
+```bash
+pip install -r requirements.txt
+```
 
-1. Create a `.env` file in the project root with:
+- Install `wkhtmltopdf` for PDF export:  
+  👉 [https://wkhtmltopdf.org/downloads.html](https://wkhtmltopdf.org/downloads.html)
 
-    ```env
-    SMTP_SERVER=smtp.gmail.com
-    SMTP_PORT=587
-    MISTRAL_API_KEY=your_default_mistral_api_key_here
-    ```
-
-2. Run the app with:
-
-    ```bash
-    streamlit run csv_summarizer_app.py
-    ```
+> Ensure it's installed to:
+> `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe` (or adjust path in code)
 
 ---
 
-## How to Use
+### 📁 .env Setup
+
+Create a `.env` file in your project root:
+
+```env
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+MISTRAL_API_KEY=your_default_mistral_api_key
+```
+
+---
+
+### ▶️ Run the App
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🧠 How to Use
 
 1. Open the app in your browser.
-2. Enter **Sender Email**, **Receiver Email**, and **App Password** (required for sending emails).
-3. Optionally enter your **Mistral API key** or leave blank to use the default key.
-4. Upload a CSV file to analyze.
-5. Click **Generate Summary** to see AI insights.
-6. Click **Send Email** to share the summary and CSV.
+2. Enter:
+   - **Sender Email**
+   - **Receiver Email**
+   - **App Password**
+3. (Optional) Enter your own **Mistral API Key**
+4. Upload a `.csv` file
+5. Click **Generate Summary** to preview insights.
+6. Click **Send Email** to deliver:
+   - ✉️ Email with summary in body
+   - 📎 CSV + PDF summary as attachments
 
 ---
 
-## How to Get an App Password (Gmail)
+## 🔐 How to Get a Gmail App Password
 
-1. Go to your [Google Account Security](https://myaccount.google.com/security).
-2. Enable **2-Step Verification** if not already done.
-3. Click **App Passwords** under "Signing in to Google".
-4. Choose **Mail** and your device, then click **Generate**.
-5. Copy the generated 16-character password into the app's **App Password** field.
+1. Visit [Google Account Security](https://myaccount.google.com/security)
+2. Enable **2-Step Verification**
+3. Under "Signing in to Google", click **App Passwords**
+4. Select **Mail > Your Device**
+5. Copy the 16-character password into the app
 
-> **Tip:** Use app passwords instead of your main password for better security.
-
----
-
-## Benefits Summary
-
-- **For Data Analysts & Managers:** Quickly summarize datasets and email insights to your team.
-- **For Researchers:** Share clean summaries and raw data in one step.
-- **For Businesses:** Speed up report sharing with minimal effort.
-- **For Everyone:** No need to write code or deal with complex email setups.
+> 🛡️ Use App Passwords — never your main Gmail password.
 
 ---
 
-## Troubleshooting
+## 💼 Use Cases
 
-- Check SMTP and email credentials.
-- Verify Mistral API key validity.
-- Monitor terminal logs for detailed errors.
+- **Data Analysts**: Quickly summarize and share insights.
+- **Managers**: Automate email reports.
+- **Researchers**: Collaborate with clean, AI-powered summaries.
+- **Startups**: Improve communication with auto-generated insights.
+- **Educators & Students**: Share datasets and summaries in one go.
 
 ---
 
-## License
+## 🐛 Troubleshooting
+
+- Check `SMTP_SERVER`, port, and credentials.
+- Ensure `wkhtmltopdf` is installed correctly.
+- Confirm Mistral API Key is valid.
+- Monitor Streamlit logs in terminal for errors.
+
+---
+
+## 🧪 Developer Notes
+
+To deploy on [Streamlit Cloud](https://share.streamlit.io):
+
+- Push `app.py`, `requirements.txt`, `.env.example` to GitHub
+- Add secrets in Streamlit Cloud:
+  ```env
+  SMTP_SERVER=smtp.gmail.com
+  SMTP_PORT=587
+  MISTRAL_API_KEY=your_key
+  ```
+
+> **Optional:** Bundle the app with `pyinstaller` for an executable.
+
+---
+
+## 📝 License
 
 MIT License © 2025 Shine Gupta
 
 ---
 
-*Built with ❤️ using Python, Streamlit, and Mistral AI*
-
+**Built with ❤️ using Python, Streamlit, and Mistral AI**
