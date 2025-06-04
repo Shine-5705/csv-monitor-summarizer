@@ -8,6 +8,17 @@ from email.message import EmailMessage
 from dotenv import load_dotenv
 from ydata_profiling import ProfileReport
 import pdfkit
+import subprocess
+
+def check_wkhtmltopdf():
+    try:
+        output = subprocess.check_output(["wkhtmltopdf", "--version"]).decode()
+        st.write(f"wkhtmltopdf version: {output}")
+    except Exception as e:
+        st.error(f"wkhtmltopdf not found or failed: {e}")
+
+# Call this function somewhere in your Streamlit app
+check_wkhtmltopdf()
 
 # Load environment variables
 load_dotenv()
