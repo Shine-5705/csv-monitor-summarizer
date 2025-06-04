@@ -1,17 +1,25 @@
 # CSV Summarizer & Emailer
 
-A simple Streamlit application that allows you to upload CSV files, automatically generate a summary of their content using the [Mistral](https://mistral.ai/) language model via OpenRouter API, and send the summary along with the CSV file as an email attachment.
+A simple **Streamlit application** that empowers you to **quickly analyze and share insights** from your CSV data using advanced AI summarization via the [Mistral](https://mistral.ai/) language model. Upload your CSV files, get concise summaries instantly, and send those insights directly via email — all from a clean and intuitive web interface.
+
+---
+
+## Why Use This App?
+
+- **Save Time:** Instantly get summaries of large CSV datasets without manually reading rows and columns.
+- **Better Communication:** Share key insights with colleagues or stakeholders via email, including the original CSV for reference.
+- **Customizable & Secure:** Input your own sender, receiver, and secure app password. Mistral API key is optional — use the default or your own.
+- **User-Friendly:** No coding required! Everything works from a web UI built with Streamlit.
+- **Flexible:** Supports any CSV file with tabular data, making it useful across domains — business reports, data audits, research, finance, and more.
 
 ---
 
 ## Application Preview
 
-![Streamlit CSV Summarizer UI Screenshot](assets\ui.png)
+![Streamlit CSV Summarizer UI Screenshot](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/ui.png)
 
 <details>
 <summary>Demo Video</summary>
-
-<!-- Replace the URL below with your actual demo video link -->
 
 [![CSV Summarizer Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
 
@@ -21,11 +29,11 @@ A simple Streamlit application that allows you to upload CSV files, automaticall
 
 ## Features
 
-- Upload CSV files and preview content.
-- Automatically summarize CSV data with Mistral AI.
-- Send email with summary and CSV file attached.
-- Supports custom sender & receiver emails with app password.
-- Optional Mistral API key input (falls back to `.env`).
+- Upload and preview CSV files easily.
+- Generate AI-powered summaries to grasp data highlights quickly.
+- Email summaries with the original CSV attached.
+- Support for custom email credentials for secure SMTP sending.
+- Optionally use your own Mistral API key or default from environment variables.
 
 ---
 
@@ -35,13 +43,13 @@ A simple Streamlit application that allows you to upload CSV files, automaticall
 
 - Python 3.7+
 - Streamlit (`pip install streamlit`)
-- Requests library (`pip install requests`)
+- Requests (`pip install requests`)
 - Python dotenv (`pip install python-dotenv`)
 - Pandas (`pip install pandas`)
 
 ### Setup
 
-1. Create a `.env` file in the project root with the following variables:
+1. Create a `.env` file in the project root with:
 
     ```env
     SMTP_SERVER=smtp.gmail.com
@@ -49,7 +57,7 @@ A simple Streamlit application that allows you to upload CSV files, automaticall
     MISTRAL_API_KEY=your_default_mistral_api_key_here
     ```
 
-2. Run the Streamlit app:
+2. Run the app with:
 
     ```bash
     streamlit run csv_summarizer_app.py
@@ -57,49 +65,51 @@ A simple Streamlit application that allows you to upload CSV files, automaticall
 
 ---
 
-## Usage
+## How to Use
 
-1. Open the Streamlit web interface.
-2. Fill in the **Sender Email**, **Receiver Email**, and **App Password** fields (required).
-3. Optionally enter your Mistral API key or leave it blank to use the one from `.env`.
-4. Upload a CSV file.
-5. Click **Generate Summary** to see the AI-generated summary.
-6. Click **Send Email** to send the summary and the CSV file to the receiver.
-
----
-
-## How to Get an App Password (for Gmail)
-
-To send emails securely, use an **App Password** instead of your main Gmail password. Here are the steps:
-
-1. Go to your [Google Account Security Settings](https://myaccount.google.com/security).
-2. Ensure **2-Step Verification** is **enabled**. If not, enable it first.
-3. Under **"Signing in to Google"**, click **App passwords**.
-4. Select **Mail** as the app and your device (e.g., Windows Computer), then click **Generate**.
-5. Copy the 16-character app password displayed and use it in the app’s **App Password** field.
-6. Keep this password safe; it can only be viewed once.
-
-> **Note:** Using app passwords helps keep your account secure by not sharing your main password with third-party apps.
+1. Open the app in your browser.
+2. Enter **Sender Email**, **Receiver Email**, and **App Password** (required for sending emails).
+3. Optionally enter your **Mistral API key** or leave blank to use the default key.
+4. Upload a CSV file to analyze.
+5. Click **Generate Summary** to see AI insights.
+6. Click **Send Email** to share the summary and CSV.
 
 ---
 
-## Security Notes
+## How to Get an App Password (Gmail)
 
-Your email credentials are used only in-memory to send the email via SMTP. Do not share your app password with others. Always use app-specific passwords instead of your main email password.
+1. Go to your [Google Account Security](https://myaccount.google.com/security).
+2. Enable **2-Step Verification** if not already done.
+3. Click **App Passwords** under "Signing in to Google".
+4. Choose **Mail** and your device, then click **Generate**.
+5. Copy the generated 16-character password into the app's **App Password** field.
+
+> **Tip:** Use app passwords instead of your main password for better security.
+
+---
+
+## Benefits Summary
+
+- **For Data Analysts & Managers:** Quickly summarize datasets and email insights to your team.
+- **For Researchers:** Share clean summaries and raw data in one step.
+- **For Businesses:** Speed up report sharing with minimal effort.
+- **For Everyone:** No need to write code or deal with complex email setups.
 
 ---
 
 ## Troubleshooting
 
-- Make sure your email account allows SMTP access and app passwords are enabled.
-- If summary generation fails, verify your Mistral API key and internet connectivity.
-- Check terminal logs for error messages.
+- Check SMTP and email credentials.
+- Verify Mistral API key validity.
+- Monitor terminal logs for detailed errors.
 
 ---
 
 ## License
 
-MIT License © 2025 Shine gupta
+MIT License © 2025 Shine Gupta
+
 ---
 
-*Created with ❤️ using Python, Streamlit, and Mistral AI*
+*Built with ❤️ using Python, Streamlit, and Mistral AI*
+

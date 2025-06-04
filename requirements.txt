@@ -1,4 +1,6 @@
-streamlit 
-pandas 
-requests 
+streamlit
+pandas
+requests
 python-dotenv
+ydata-profiling
+pdfkit
