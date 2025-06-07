@@ -34,7 +34,7 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 <details>
 <summary>🎥 Demo Video</summary>
 
-[![CSV Summarizer Demo Video🎥](https://youtu.be/-lqke84Vpug)](https://youtu.be/-lqke84Vpug)
+[![CSV Summarizer Demo Video🎥](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/thumbnail.png)](https://youtu.be/-lqke84Vpug)
 
 </details>
 
