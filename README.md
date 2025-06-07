@@ -32,9 +32,9 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 ![Streamlit CSV Summarizer UI Screenshot](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/image.png)
 
 <details>
-<!-- <summary>🎥 Demo Video</summary> -->
+<summary>🎥 Demo Video</summary>
 
-[![CSV Summarizer Demo Video🎥](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/thumbnail.png)](https://youtu.be/-lqke84Vpug)
+![CSV Summarizer Demo Video🎥](https://github.com/Shine-5705/csv-monitor-summarizer/blob/main/assets/thumbnail.png)(https://youtu.be/-lqke84Vpug)
 
 </details>
 
