@@ -2,7 +2,7 @@
 
 A simple **Streamlit application** that empowers you to **quickly analyze and share insights** from your CSV data using advanced AI summarization via the [Mistral](https://mistral.ai/) language model. Upload your CSV files, get concise summaries instantly, and send those insights directly via email — including a **PDF report and the original CSV**.
 
-🟢 **Live Demo:** [https://csv-summarizer-emailer.onrender.com](https://csv-summarizer-emailer.onrender.com)
+🟢 **Live On:** [https://csv-summarizer-emailer.onrender.com](https://csv-summarizer-emailer.onrender.com)
 
 ---
 
@@ -34,7 +34,7 @@ A simple **Streamlit application** that empowers you to **quickly analyze and sh
 <details>
 <summary>🎥 Demo Video</summary>
 
-[![CSV Summarizer Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
+[![CSV Summarizer Demo Video🎥](https://youtu.be/-lqke84Vpug)](https://youtu.be/-lqke84Vpug)
 
 </details>
 
